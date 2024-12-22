@@ -1,4 +1,5 @@
-import Image, struct, sys
+from PIL import Image
+import struct, sys
 
 cart_name = sys.argv[1]
 f = open(cart_name, 'rb')

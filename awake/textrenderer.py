@@ -102,7 +102,7 @@ class Renderer(object):
         self.add(self.database.nameForAddress(addr))
 
     def add(self, text, klass=None, url=None):
-        assert isinstance(text, (str, unicode))
+        assert isinstance(text, str)
         if self.inComment and not klass:
             klass = 'comment'
         self._add(text, klass, url)
@@ -151,8 +151,8 @@ class PlainTextRenderer(Renderer):
         self.content = []
 
     def getContents(self):
-        print self.content
-        print [str(x) for x in self.content]
+        print(self.content)
+        print([str(x) for x in self.content])
         return ''.join(self.content)
 
     def _add(self, text, klass=None, url=None):

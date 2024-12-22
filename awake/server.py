@@ -14,13 +14,13 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import Queue
-import Tkinter as tk
-import ttk
-import httplib
+import queue as Queue
+import tkinter as tk
+from tkinter import ttk
+import http.client as httplib
 import webbrowser
-from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
-from urlparse import urlparse, parse_qs
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from urllib.parse import urlparse, parse_qs
 from awake import address, procedure
 from awake.textrenderer import HtmlRenderer
 from awake.util import AsyncTask, getTkRoot

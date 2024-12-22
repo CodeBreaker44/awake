@@ -1,7 +1,7 @@
-from Queue import Queue
+from queue import Queue
 from threading import Thread
-import Tkinter as tk
-import ttk
+import tkinter as tk
+from tkinter import ttk
 
 tk_root = None
 
@@ -22,7 +22,7 @@ class AsyncTask(object):
     def start(self):
         if self.thread:
             if not self.isFinished():
-                print 'Warning: previous task not finished yet.'
+                print('Warning: previous task not finished yet.')
             self.thread = None
         self.error = None
         self.requestCancel = False
@@ -42,7 +42,7 @@ class AsyncTask(object):
         self.queue.put(args)
 
     def work(self):
-        queue.put("AsyncTask works.")
+        self.queue.put("AsyncTask works.")
 
 class RadioGroup(ttk.LabelFrame):
     def __init__(self, parent, text, options, default=None):

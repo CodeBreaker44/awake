@@ -15,9 +15,9 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import os.path
-import Tkinter as tk
-import ttk
-from tkFileDialog import askopenfilename
+import tkinter as tk
+from tkinter import ttk
+from tkinter.filedialog import askopenfilename
 from awake.config import Config
 from awake.export import ExportDialog
 from awake.project import Project
@@ -151,7 +151,7 @@ class MainFrame(ttk.Frame):
         self.text.pack(side="left", fill="both", expand=True)
 
         self.text.configure(foreground=style['default'])
-        for key, value in style.iteritems():
+        for key, value in style.items():
             self.text.tag_config(key, foreground=value)
 
         self.openSplashPage()

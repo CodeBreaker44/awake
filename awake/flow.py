@@ -393,7 +393,7 @@ class ProcedureFlow(object):
             x.addToIndex(index)
 
 def update_info(proc, database):
-    print 'Updating info for', str(proc.addr)
+    print('Updating info for', str(proc.addr))
     info = database.procInfo(proc.addr)
     info.depset = proc.getDependencySet()
     info.has_switch = proc.has_switch

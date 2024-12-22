@@ -14,10 +14,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import time, re, os, Queue
-import Tkinter as tk
-import ttk
-from tkFileDialog import asksaveasfilename
+import time, re, os, queue
+import tkinter as tk
+from tkinter import ttk
+from tkinter.filedialog import asksaveasfilename
 from awake import address, procedure
 from awake.util import AsyncTask, RadioGroup, getTkRoot, BankSelect
 from awake.textrenderer import HtmlRenderer
@@ -169,7 +169,7 @@ class ExportDialog(tk.Toplevel):
                 self.progressbar['maximum'] = total
                 self.progressbar['value'] = done
                 self.status.configure(text=msg)
-        except Queue.Empty:
+        except queue.Empty:
             pass
 
         if self.task.isFinished():

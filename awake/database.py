@@ -235,7 +235,7 @@ class Database(object):
         width = 256
         height = romsize/width
 
-        import Image
+        from PIL import Image
         img = Image.new('RGB', (width, height))
 
         for i in range(512*1024):
